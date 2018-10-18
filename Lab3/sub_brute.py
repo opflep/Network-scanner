@@ -27,7 +27,8 @@ def scan(domain, sub_dict):
 			# print "Fail " + i
 			pass
 	print "========================================================="
-	print "Scan Done"	
+	print "Scan Done"
+	return sub_list
 
 def export_file(sub_list,fileName):
 	file = open(fileName,"w")
@@ -41,6 +42,7 @@ def main():
 	domain = raw_input("Enter domain to scan: ")
 	sub_list = scan(domain,sub_dict)
 	output = domain + "_result.txt"
+	print sub_list
 	export_file(sub_list,output)
 
 
